@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Http\Api\CurrencyApi;
 use App\Models\Currency;
 use GuzzleHttp\Client;
 
@@ -39,7 +40,7 @@ class DeleteApi extends Command
      */
     public function handle()
     {
-        $weather = new CurrencyApiController();
+        $weather = new CurrencyApi();
         $weather->destroy();
     }
 }

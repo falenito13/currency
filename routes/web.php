@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'CurrencyApiController@showCurrency');
+Route::get('/', 'CurrencyApi@showCurrency');

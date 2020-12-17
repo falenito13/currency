@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Controllers\CurrencyApiController;
+use App\Http\Api\CurrencyApi;
 use App\Models\Currency;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
@@ -40,7 +40,7 @@ class GetApi extends Command
      */
     public function handle()
     {
-        $weatherApi = new CurrencyApiController();
+        $weatherApi = new CurrencyApi();
         $weatherApi->callCurrencyApi();
     }
 }
